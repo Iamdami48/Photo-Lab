@@ -1,0 +1,300 @@
+* {
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: var(--text-color);
+  list-style-type: none;
+  -webkit-user-select: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body::-webkit-scrollbar {
+  background-color: orangered;
+  width: 15px;
+}
+body::-webkit-scrollbar-button {
+  background-color: orange;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(22, 35, 75);
+  height: 10px;
+  width: 100px;
+}
+button {
+  border: solid rgb(53, 75, 143);
+  padding: 5px;
+  border-radius: 6px;
+  background-color: var(--color);
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+button:hover {
+  color: var(--color);
+  background-color: rgba(65, 105, 225, 0.37);
+}
+form {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+input {
+  display: block;
+  width: 90%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+/* CSS RESET ENDS HERE */
+:root {
+  --primary-color: #4169e1;
+  --color: #212832;
+  --text-color: #8e8e8f;
+  --text-background-color: #181f20;
+  /* #8e8e8f */
+  /* 4169e1 */
+}
+
+.App {
+  background: #000;
+  height: 100vh;
+  width: 100%;
+}
+header {
+  background: var(--primary-color);
+  color: var(--color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  color: #fff;
+}
+.modal-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+.modal {
+  background-color: var(--color);
+  height: 350px;
+  border-radius: 8px;
+  width: 90%;
+  display: grid;
+  place-items: center;
+}
+input[type="url"] {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+input[type="submit"] {
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  color: var(--color);
+  margin: 10px 0;
+}
+input[type="reset"] {
+  border: solid 3px var(--primary-color);
+  font-size: 1rem;
+  color: var(--primary-color);
+  transition: all ease 0.5s;
+  background-color: var(--color);
+}
+input[type="reset"]:hover {
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  color: var(--color);
+  transition: all ease 0.5s;
+}
+input[type="file"] {
+  display: none;
+}
+form label {
+  width: 90%;
+}
+form label p {
+  margin-top: 5px;
+  border: solid 2px orangered;
+  width: 100%;
+  color: #fff;
+  font-size: 1.1rem;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form label p:active {
+  opacity: 0;
+}
+.close-modal {
+  color: orangered;
+  cursor: pointer;
+}
+.styled-div {
+  border: solid 1px var(--text-color);
+  width: 90%;
+  height: 450px;
+  border-radius: 8px;
+  margin: auto;
+  margin-top: 50px;
+  transition: all 1s ease;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  top: -25px;
+}
+.controller {
+  border-top: solid 2px var(--primary-color);
+  margin: 20px 0 0 0;
+  background-color: var(--color);
+  height: 200px;
+  padding: 10px 20px 0 20px;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+}
+h4 {
+  padding: 5px;
+  background-color: var(--text-background-color);
+  width: 50%;
+  border-radius: 4px;
+}
+.drop-shadow-controller {
+  background-color: var(--color);
+  padding: 50px 10px;
+  padding-bottom: 100px;
+}
+.drop-shadow-controller-container {
+  background-color: var(--text-background-color);
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 10px;
+}
+.drop-shadow-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drop-shadow-input-container input[type="color"] {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  color: var(--primary-color);
+  background: var(--color);
+}
+footer {
+  border-top: solid 1px var(--primary-color);
+  position: fixed;
+  bottom: 0;
+  overflow-x: scroll;
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--text-background-color);
+}
+footer div {
+  padding: 10px 0;
+  border-radius: 4px;
+  background-color: var(--color);
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  width: 150px;
+  font-size: 1.1rem;
+}
+.footerDiv:hover,
+.footerDiv:active,
+.active {
+  background: var(--text-background-color);
+}
+
+@media only screen and (min-width: 1140px) {
+  .App {
+    overflow: hidden;
+    width: 100%;
+  }
+  .modal {
+    width: 50%;
+  }
+  .parentdiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    overflow-y: scroll;
+  }
+  header {
+    z-index: 9;
+    position: relative;
+  }
+  footer {
+    width: 10%;
+    grid-auto-flow: row;
+    position: fixed;
+    bottom: 0;
+    height: 90vh;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-left: solid 1px var(--primary-color);
+  }
+  .flex-Div {
+    display: flex;
+    width: 100%;
+  }
+  .styled-div {
+    width: 40%;
+    height: 450px;
+  }
+  .controller {
+    height: 450px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin: 0;
+  }
+  .input-container {
+    width: 100%;
+  }
+  .drop-shadow-controller {
+    height: 450px;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    margin-right: 150px;
+    width: 40%;
+  }
+  .drop-shadow-controller::-webkit-scrollbar {
+    background-color: var(--primary-color);
+    width: 10px;
+  }
+  footer div {
+    padding: 10px 0;
+    border-radius: 4px;
+    background-color: var(--color);
+    display: grid;
+    place-content: center;
+    gap: 4px;
+    width: 100px;
+    font-size: 1rem;
+  }
+}
